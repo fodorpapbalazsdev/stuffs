@@ -1,0 +1,14 @@
+environment {
+    terminal "iTerm"
+    textEditor "Atom"
+}
+
+behavior {
+    theme "Kon"
+    useMainThemeColors "true"
+}
+
+keyBindings {
+    "Cmd+6" "core.ext.terminal.open"
+    "Cmd+F" "core.lookup"
+}
