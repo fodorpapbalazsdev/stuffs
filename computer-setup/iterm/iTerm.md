@@ -1,11 +1,10 @@
-# This file describe how to setup iTerm Appearance
+# This file describes how to set up iTerm Appearance
 
-![iTerm Appearance](iterm.png)
+![iTerm Appearance](resources/iterm.png)
 
 ## .zshrc config file (under Applications/iTerm - this file not exist by default we should create it)
 
-## command:
-`open ~/.zshrc`
+Open `zshrc` with `open ~/.zshrc` or if its already configured then `zshconfig`.
 
 ## colors can be found here: 
 https://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt

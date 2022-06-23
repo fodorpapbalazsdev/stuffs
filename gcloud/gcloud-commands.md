@@ -1,4 +1,4 @@
-# sThis file contains some useful command, what I used during GCLOUD computing
+# This file contains some useful command, what I used during GCLOUD computing
 
 ### Select project
 `gcloud config set project cloud-computing-class-306811`

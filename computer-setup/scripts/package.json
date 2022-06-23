@@ -1,0 +1,8 @@
+{
+  "name": "scripts",
+  "version": "0.0.1",
+  "scripts": {
+    "install": "npm run install-kafka-script",
+    "install-kafka-script": "sh kafka/install-kafka-scripts.sh $HOME/Documents/kafka/kafka-docker"
+  }
+}

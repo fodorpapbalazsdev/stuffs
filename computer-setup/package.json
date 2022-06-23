@@ -1,0 +1,9 @@
+{
+  "name": "computer-setup",
+  "version": "0.0.1",
+  "scripts": {
+    "setup": "npm run install-scripts",
+    "install-scripts": "cd scripts && npm install",
+    "add-alliases": "cd aliases && npm install"
+  }
+}
