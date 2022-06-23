@@ -1,0 +1,8 @@
+{
+  "name": "zsh",
+  "version": "0.0.1",
+  "scripts": {
+    "update": "npm run update-zsh",
+    "update-zsh": "sh update-zshrc.sh"
+  }
+}
