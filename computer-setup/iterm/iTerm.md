@@ -1,5 +1,14 @@
-# This file describes how to set up iTerm Appearance
+# This file describes how to set up iTerm and it's Appearance
 
+The config of my iTerm can be found in the following [config file](com.googlecode.iterm2.plist).
+
+Make sure the 'Load preferences from a custom folder or URL' is enabled and linked to this folder:
+
+![iTerm Appearance](resources/load_preferences.png)
+
+---
+
+(old look)
 ![iTerm Appearance](resources/iterm.png)
 
 ## .zshrc config file (under Applications/iTerm - this file not exist by default we should create it)
