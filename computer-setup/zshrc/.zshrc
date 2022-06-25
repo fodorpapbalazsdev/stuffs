@@ -139,3 +139,6 @@ export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Default text editor
+export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom"

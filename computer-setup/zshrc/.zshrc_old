@@ -120,8 +120,8 @@ alias gitmaster='git checkout master;gitupdate'
 
 # Kafka related
 # make sure that the path is correct and scripts are there
-alias kafka-start='sh $HOME/Documents/kafka/kafka-docker/start.sh' # change the path to your kafka dir
-alias kafka-stop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to your kafka dir
+alias kstart='sh $HOME/Documents/kafka/kafka-docker/start.sh' # change the path to your kafka dir
+alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to your kafka dir
 
 ###### Own aliases ends here
 
@@ -139,3 +139,6 @@ export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Default text editor
+export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom"
