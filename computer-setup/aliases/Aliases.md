@@ -20,8 +20,8 @@ alias gitmaster='git checkout master;gitupdate'
 
 # Kafka related
 # make sure that the path is correct and scripts are there
-alias kafka-start='sh $HOME/Documents/kafka/kafka-docker/start.sh' # change the path to your kafka dir
-alias kafka-stop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to your kafka dir
+alias kstart='sh $HOME/Documents/kafka/kafka-docker/start.sh' # change the path to your kafka dir
+alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to your kafka dir
 
 ###### Own aliases ends here
 ```
