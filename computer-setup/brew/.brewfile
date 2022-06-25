@@ -1,0 +1,117 @@
+
+# tap repositories and their packages
+
+tap homebrew/core
+brew angular-cli
+brew avro-c
+brew bash-completion
+brew boost
+brew brotli
+brew c-ares
+brew ca-certificates
+brew double-conversion
+brew fb303
+brew fbthrift
+brew fizz
+brew fmt
+brew folly
+brew freetype
+brew gdbm
+brew gettext
+brew gflags
+brew git
+brew git-flow-avh
+brew glog
+brew gnu-getopt
+brew grep
+brew icu4c
+brew jansson
+brew jemalloc
+brew jq
+brew kafka
+brew kcat
+brew krb5
+brew libev
+brew libevent
+brew libice
+brew libnghttp2
+brew libpng
+brew libpthread-stubs
+brew librdkafka
+brew libserdes
+brew libsm
+brew libsodium
+brew libuv
+brew libx11
+brew libxau
+brew libxcb
+brew libxdmcp
+brew libxext
+brew libxmu
+brew libxt
+brew liquibase
+brew lz4
+brew lzlib
+brew macos-term-size
+brew mas
+brew maven
+brew metricbeat
+brew mpdecimal
+brew ncurses
+brew nghttp2
+brew node
+brew node@12
+brew node@14
+brew oniguruma
+brew openjdk
+brew openjdk@11
+brew openjdk@8
+brew openssl@1.1
+brew pcre
+brew pcre2
+brew pkg-config
+brew postgresql
+brew python@3.10
+brew python@3.9
+brew readline
+brew serve
+brew snappy
+brew sqlite
+brew wangle
+brew watchman
+brew xclip
+brew xorgproto
+brew xz
+brew yajl
+brew zookeeper
+brew zsh
+brew zsh-syntax-highlighting
+brew zstd
+
+tap homebrew/bundle
+
+tap homebrew/cask-versions
+
+tap homebrew/cask
+cask amethyst
+cask beyond-compare
+cask marta
+cask mucommander
+cask spotmenu
+cask start
+
+tap int128/kubelogin
+brew kubelogin
+
+tap rcmdnk/file
+brew brew-file
+
+# App Store applications
+appstore 1035236694  Commander One  (3.4.1)
+appstore 1444383602  GoodNotes      (5.9.18)
+appstore 409183694   Keynote        (12.1)
+appstore 441258766   Magnet         (2.8.0)
+appstore 1480068668  Messenger      (153.0)
+appstore 967805235   Paste          (3.1.9)
+appstore 803453959   Slack          (4.26.1)
+appstore 1431995750  Taskheat       (1.7.9)
