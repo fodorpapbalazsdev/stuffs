@@ -1,1 +1,3 @@
 /.idea/*
+/gs/nix/.vagrant/*
+/gs/nix/*console.log
