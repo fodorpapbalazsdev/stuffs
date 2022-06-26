@@ -1,5 +1,10 @@
 # Homebrew,  Homebrew Bundle and everything around it
 
+Install Homebrew:   
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
 
 ## homebrew-file
@@ -26,12 +31,13 @@ fi
 
 `brew cleanup`
 
+create Caskfile: `brew file casklist`
+
 update .brewfile: `brew file update`
 
-get a summary of Apps: `brew file casklist` or `brew list`
+get a summary of Apps: `brew list`
 
-
-### New computer setup
+### New computer setup:
 When you get new Mac just do:
 `brew file install`
 (make sure the HOMEBREW_BREWFILE is set correctly and the file is there as mentioned above)

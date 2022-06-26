@@ -1,0 +1,9 @@
+{
+  "name": "brew-config",
+  "version": "0.0.1",
+  "scripts": {
+    "install": "npm run install-brew",
+    "update": "todo",
+    "install-brew": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+  }
+}
