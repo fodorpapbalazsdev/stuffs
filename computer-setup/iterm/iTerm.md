@@ -4,6 +4,8 @@ The config of my iTerm can be found in the following [config file](com.googlecod
 
 Make sure the 'Load preferences from a custom folder or URL' is enabled and linked to this folder:
 
+`/Users/balazsfodorpap/Documents/personal/repositories/stuffs/computer-setup/iterm`
+
 ![iTerm Appearance](resources/load_preferences.png)
 
 ---
