@@ -17,7 +17,7 @@ Add the following lines to [.zshrc](/computer-setup/zshrc/.zshrc) file.
 
 ```
 # Location of Brewfile
-export HOMEBREW_BREWFILE=$HOME/Documents/readmes/computer-setup/brew/.brewfile
+export HOMEBREW_BREWFILE=$HOME/Documents/personal/repositories/stuffs/computer-setup/brew/.brewfile
 
 # Wrap brew command to for an automatic update of Brewfile when you execute such a brew install or brew uninstall.
 if [ -f $(brew --prefix)/etc/brew-wrap ];then

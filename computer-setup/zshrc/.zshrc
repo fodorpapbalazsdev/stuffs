@@ -144,7 +144,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom"
 
 # Location of Brewfile
-export HOMEBREW_BREWFILE=$HOME/Documents/readmes/computer-setup/brew/.brewfile
+export HOMEBREW_BREWFILE=$HOME/Documents/personal/repositories/stuffs/computer-setup/brew/.brewfile
 
 # Wrap brew command to for an automatic update of Brewfile when you execute such a brew install or brew uninstall.
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
