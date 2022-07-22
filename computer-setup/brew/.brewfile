@@ -31,8 +31,10 @@ brew jq
 brew kafka
 brew kcat
 brew krb5
+brew libcbor
 brew libev
 brew libevent
+brew libfido2
 brew libice
 brew libnghttp2
 brew libpng
@@ -57,6 +59,7 @@ brew mas
 brew maven
 brew metricbeat
 brew mpdecimal
+brew mysql
 brew ncurses
 brew nghttp2
 brew node
@@ -71,6 +74,7 @@ brew pcre
 brew pcre2
 brew pkg-config
 brew postgresql
+brew protobuf
 brew python@3.10
 brew python@3.9
 brew readline
@@ -106,7 +110,7 @@ brew brew-file
 
 # App Store applications
 appstore 1035236694  Commander One  (3.4.1)
-appstore 1444383602  GoodNotes      (5.9.20)
+appstore 1444383602  GoodNotes      (5.9.25)
 appstore 409183694   Keynote        (12.1)
 appstore 441258766   Magnet         (2.9.0)
 appstore 1480068668  Messenger      (153.0)
