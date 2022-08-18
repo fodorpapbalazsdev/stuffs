@@ -123,6 +123,9 @@ alias gitmaster='git checkout master;gitupdate'
 alias kstart='sh $HOME/Documents/kafka/kafka-docker/start.sh' # change the path to your kafka dir
 alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to your kafka dir
 
+# Docker related
+alias  dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
+
 ###### Own aliases ends here
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
