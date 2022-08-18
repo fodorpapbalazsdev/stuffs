@@ -87,6 +87,7 @@ brew xclip
 brew xorgproto
 brew xz
 brew yajl
+brew zlib
 brew zookeeper
 brew zsh
 brew zsh-syntax-highlighting
@@ -109,10 +110,10 @@ tap rcmdnk/file
 brew brew-file
 
 # App Store applications
-appstore 1035236694  Commander One  (3.4.1)
-appstore 1444383602  GoodNotes      (5.9.25)
+appstore 1035236694  Commander One  (3.4.2)
+appstore 1444383602  GoodNotes      (5.9.32)
 appstore 409183694   Keynote        (12.1)
 appstore 441258766   Magnet         (2.9.0)
-appstore 1480068668  Messenger      (153.0)
+appstore 1480068668  Messenger      (155.0)
 appstore 967805235   Paste          (3.1.9)
 appstore 803453959   Slack          (4.27.154)
