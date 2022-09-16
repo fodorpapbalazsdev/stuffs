@@ -73,7 +73,7 @@ brew openssl@1.1
 brew pcre
 brew pcre2
 brew pkg-config
-brew postgresql
+brew postgresql@14
 brew protobuf
 brew python@3.10
 brew python@3.9
@@ -111,9 +111,8 @@ brew brew-file
 
 # App Store applications
 appstore 1035236694  Commander One  (3.4.2)
-appstore 1444383602  GoodNotes      (5.9.32)
+appstore 1444383602  GoodNotes      (5.9.37)
 appstore 409183694   Keynote        (12.1)
 appstore 441258766   Magnet         (2.9.0)
-appstore 1480068668  Messenger      (155.0)
-# appstore 967805235   Paste          (3.1.9) I have it from Setapp
-appstore 803453959   Slack          (4.27.154)
+appstore 1480068668  Messenger      (158.0)
+appstore 803453959   Slack          (4.28.171)
