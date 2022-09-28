@@ -130,7 +130,8 @@ alias  dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t";
 alias istuffs='cd $HOME/Documents/personal/repositories/stuffs && idea .'
 alias iclient='cd $HOME/Documents/repositories/epd/client && idea .'
 alias icare='cd $HOME/Documents/repositories/epd/care && idea .'
-alias ijur='cd $HOME/Documents/repositories/epd/juridical && idea .'
+alias ijur='ijuridical'
+alias ijuridical='cd $HOME/Documents/repositories/epd/juridical && idea .'
 alias imain='cd $HOME/Documents/repositories/epd/main && idea .'
 
 ###### Own aliases ends here
