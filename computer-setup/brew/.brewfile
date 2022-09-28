@@ -9,24 +9,31 @@ brew boost
 brew brotli
 brew c-ares
 brew ca-certificates
+brew cairo
 brew double-conversion
 brew fb303
 brew fbthrift
 brew fizz
 brew fmt
 brew folly
+brew fontconfig
 brew freetype
 brew gdbm
 brew gettext
 brew gflags
+brew giflib
 brew git
 brew git-flow-avh
+brew glib
 brew glog
 brew gnu-getopt
+brew graphite2
 brew grep
+brew harfbuzz
 brew icu4c
 brew jansson
 brew jemalloc
+brew jpeg-turbo
 brew jq
 brew kafka
 brew kcat
@@ -43,6 +50,7 @@ brew librdkafka
 brew libserdes
 brew libsm
 brew libsodium
+brew libtiff
 brew libuv
 brew libx11
 brew libxau
@@ -50,10 +58,13 @@ brew libxcb
 brew libxdmcp
 brew libxext
 brew libxmu
+brew libxrender
 brew libxt
 brew liquibase
+brew little-cms2
 brew lz4
 brew lzlib
+brew lzo
 brew macos-term-size
 brew mas
 brew maven
@@ -72,6 +83,7 @@ brew openjdk@8
 brew openssl@1.1
 brew pcre
 brew pcre2
+brew pixman
 brew pkg-config
 brew postgresql@14
 brew protobuf
@@ -82,6 +94,7 @@ brew serve
 brew snappy
 brew sqlite
 brew wangle
+brew watch
 brew watchman
 brew xclip
 brew xorgproto
@@ -111,8 +124,8 @@ brew brew-file
 
 # App Store applications
 appstore 1035236694  Commander One  (3.4.2)
-appstore 1444383602  GoodNotes      (5.9.37)
+appstore 1444383602  GoodNotes      (5.9.38)
 appstore 409183694   Keynote        (12.1)
 appstore 441258766   Magnet         (2.9.0)
 appstore 1480068668  Messenger      (158.0)
-appstore 803453959   Slack          (4.28.171)
+appstore 803453959   Slack          (4.28.182)
