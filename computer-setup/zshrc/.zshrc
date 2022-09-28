@@ -126,6 +126,13 @@ alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to
 # Docker related
 alias  dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
 
+# intelliJ IDEA related
+alias istuffs='cd $HOME/Documents/personal/repositories/stuffs && idea .'
+alias iclient='cd $HOME/Documents/repositories/epd/client && idea .'
+alias icare='cd $HOME/Documents/repositories/epd/care && idea .'
+alias ijur='cd $HOME/Documents/repositories/epd/juridical && idea .'
+alias imain='cd $HOME/Documents/repositories/epd/main && idea .'
+
 ###### Own aliases ends here
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
