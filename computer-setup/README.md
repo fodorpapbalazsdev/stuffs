@@ -6,3 +6,6 @@
 [.zshrc](zshrc/.zshrc)
 
 To set up (and update) run `npm run setup`.
+
+## Usefull links:
+[sourabhbajaj.com/mac-setup/]([zshrc/.zshrc](https://sourabhbajaj.com/mac-setup/))
