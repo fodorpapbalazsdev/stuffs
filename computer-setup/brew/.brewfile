@@ -95,7 +95,6 @@ brew snappy
 brew sqlite
 brew wangle
 brew watch
-brew watchman
 brew xclip
 brew xorgproto
 brew xz
