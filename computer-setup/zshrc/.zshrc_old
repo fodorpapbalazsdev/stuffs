@@ -169,3 +169,6 @@ export HOMEBREW_BREWFILE=$HOME/Documents/personal/repositories/stuffs/computer-s
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
 fi
+
+# Kubernetes
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh) # set up autocomplete
