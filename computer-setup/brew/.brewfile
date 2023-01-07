@@ -27,9 +27,11 @@ brew jansson
 brew jemalloc
 brew jpeg-turbo
 brew jq
+brew k9s
 brew kafka
 brew kcat
 brew krb5
+brew kubernetes-cli
 brew libcbor
 brew libev
 brew libevent
@@ -59,6 +61,7 @@ brew lzo
 brew macos-term-size
 brew mas
 brew maven
+brew minikube
 brew mpdecimal
 brew mysql
 brew ncurses
@@ -103,6 +106,8 @@ cask beyond-compare
 cask marta
 cask vagrant
 cask virtualbox
+
+tap derailed/k9s
 
 tap int128/kubelogin
 brew kubelogin
