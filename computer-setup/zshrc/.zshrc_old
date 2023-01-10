@@ -77,7 +77,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+
+# some notes about kube-ps1:
+#   currently it's not working with oh-my-zsh, https://github.com/jonmosco/kube-ps1/issues/168
+plugins=(git kube-ps1)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,8 +126,13 @@ alias gitmaster='git checkout master;gitupdate'
 alias kstart='sh $HOME/Documents/kafka/kafka-docker/start.sh' # change the path to your kafka dir
 alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to your kafka dir
 
-# Docker related
-alias  dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
+# Docker & Kubernetes related
+alias dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
+alias kx='kubectx'
+alias kxd='kubectx aota030.avinty.cloud && kubens tnieuw '
+alias kn='kubens'
+alias kc='echo $(kubectx -c) : $(kubens -c)'
+alias kfns='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kubernetes/kfns.sh'
 
 # project related
 alias cdstuffs='cd $HOME/Documents/personal/repositories/stuffs'
