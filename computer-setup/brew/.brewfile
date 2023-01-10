@@ -5,6 +5,7 @@ tap homebrew/core
 brew angular-cli
 brew avro-c
 brew bash-completion
+brew bat
 brew brotli
 brew c-ares
 brew ca-certificates
@@ -12,6 +13,7 @@ brew cairo
 brew docker-completion
 brew fontconfig
 brew freetype
+brew fzf
 brew gdbm
 brew gettext
 brew giflib
