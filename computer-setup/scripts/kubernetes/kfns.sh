@@ -42,6 +42,10 @@ namespace_search() {
            else
               echo "${BLUE}--> Lets switch to ${YELLOW}$cluster : $namespace${GREEN}"
               kubectx $cluster && kubens $namespace
+              if [ "$2" = 'kafka' ]; then
+                echo "${BLUE}-->Get ssh in kafka-0:${PLAIN}"
+                kubectl exec --stdin --tty kafka-0 -- /bin/bash
+              fi
            fi
            break
          fi
@@ -61,10 +65,9 @@ reset() {
 
 clear
 # if the first argument is given, then wee look for that namespace
-if [ -z "$1" ]
-  then
-    echo "${BLUE}No argument supplied, running in default mode [listing all of the clusters and namespaces]${GREEN}"
-    cluster_objects
+if [ -z "$1" ]; then
+   echo "${BLUE}No argument supplied, running in default mode [listing all of the clusters and namespaces]${GREEN}"
+   cluster_objects
 else
    echo "${BLUE}Looking for: ${YELLOW}$1${GREEN}"
    namespace_search $1 $2
