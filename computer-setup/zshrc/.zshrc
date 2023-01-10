@@ -133,6 +133,7 @@ alias kxd='kubectx aota030.avinty.cloud && kubens tnieuw '
 alias kn='kubens'
 alias kc='echo $(kubectx -c) : $(kubens -c)'
 alias kfns='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kubernetes/kfns.sh'
+alias kgi="kubectl get deployments -o=json | jq -r '.items[].spec.template.spec.containers[].image'"
 
 # project related
 alias cdstuffs='cd $HOME/Documents/personal/repositories/stuffs'
