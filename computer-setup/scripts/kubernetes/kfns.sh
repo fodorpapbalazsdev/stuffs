@@ -43,7 +43,7 @@ namespace_search() {
               echo "${BLUE}--> Lets switch to ${YELLOW}$cluster : $namespace${GREEN}"
               kubectx $cluster && kubens $namespace
               if [ "$2" = 'kafka' ]; then
-                echo "${BLUE}-->Get ssh in kafka-0:${PLAIN}"
+                echo "${BLUE}--> Get ssh in kafka-0:${PLAIN}"
                 kubectl exec --stdin --tty kafka-0 -- /bin/bash
               fi
            fi
