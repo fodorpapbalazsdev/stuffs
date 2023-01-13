@@ -40,7 +40,7 @@ namespace_search() {
              then
                 echo "${BLUE}--> Run the following cmd to switch to it: ${YELLOW}kubectx '$cluster' && kubens '$namespace'${GREEN}"
            else
-              echo "${BLUE}--> Lets switch to ${YELLOW}$cluster : $namespace${GREEN}"
+              echo "${BLUE}--> Lets switch to ${YELLOW}$cluster : $namespace${PLAIN}"
               kubectx $cluster && kubens $namespace
               if [ "$2" = 'kafka' ]; then
                 echo "${BLUE}--> Get ssh in kafka-0:${PLAIN}"

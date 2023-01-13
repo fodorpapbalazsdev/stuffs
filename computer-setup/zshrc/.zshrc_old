@@ -1,3 +1,12 @@
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;36m'
+PLAIN='\033[0m'
+bold=$(tput bold)
+normal=$(tput sgr0)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -129,9 +138,12 @@ alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to
 # Docker & Kubernetes related
 alias dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
 alias kx='kubectx'
-alias kxd='kubectx aota030.avinty.cloud && kubens tnieuw '
+alias kntnieuw='kubectx aota030.avinty.cloud && kubens tnieuw '
+alias knonieuw='kubectx aota030.avinty.cloud && kubens onieuw '
+alias knthuidig='kubectx aota030.avinty.cloud && kubens thuidig '
+alias kntvorig='kubectx aota030.avinty.cloud && kubens tvorig '
 alias kn='kubens'
-alias kc='echo $(kubectx -c) : $(kubens -c)'
+alias kc='echo ${BLUE}$(kubectx -c) : ${YELLOW}$(kubens -c)${PLAIN}'
 alias kfns='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kubernetes/kfns.sh'
 alias kgi="kc && kubectl get deployments -o=json | jq -r '.items[].spec.template.spec.containers[].image'"
 
