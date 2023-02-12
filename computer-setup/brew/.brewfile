@@ -128,8 +128,8 @@ tap rcmdnk/file
 brew brew-file
 
 # App Store applications
-appstore 1444383602  GoodNotes  (5.9.68)
+appstore 1444383602  GoodNotes  (5.9.83)
 appstore 409183694   Keynote    (12.2.1)
-appstore 441258766   Magnet     (2.10.0)
-appstore 1480068668  Messenger  (169.0)
+appstore 441258766   Magnet     (2.11.0)
+appstore 1480068668  Messenger  (175.0)
 appstore 803453959   Slack      (4.29.149)
