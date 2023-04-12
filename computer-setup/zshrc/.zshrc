@@ -163,6 +163,9 @@ alias ijuridical='cdjuridical && idea .'
 alias ijur='ijuridical'
 alias imain='cdmain && idea .'
 
+#fzf related
+alias fzfcd='cd $(find . -type d -print | fzf)'
+
 ###### Own aliases ends here
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -181,7 +184,7 @@ export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Default text editor
-export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom"
+export EDITOR="/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
 
 # Location of Brewfile
 export HOMEBREW_BREWFILE=$HOME/Documents/personal/repositories/stuffs/computer-setup/brew/.brewfile

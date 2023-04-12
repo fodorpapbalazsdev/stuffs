@@ -1,3 +1,4 @@
 /.idea/*
 /gs/nix/.vagrant/*
 /gs/nix/*console.log
+/gs/kubernetes/.vagrant/
