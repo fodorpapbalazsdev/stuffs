@@ -123,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 
 # General
 alias zshconfig="open ~/.zshrc"
+alias cdm2 = "cd ~/.m2"
 
 # Git related
 alias gitupdate='git fetch;git pull'
