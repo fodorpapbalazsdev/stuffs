@@ -28,6 +28,7 @@ else
         echo "INFO: Please provide the correct path with -p like 'stop.sh $HOME/Documents/kafka/kafka-docker'"
         exit 1
    else
+        kubectl config use-context docker-desktop
         kubectl -n kafka delete -f "$path"/kafka.yaml
         kubectl -n zookeeper delete -f "$path"/zookeeper.yaml
         kubectl delete namespace kafka
