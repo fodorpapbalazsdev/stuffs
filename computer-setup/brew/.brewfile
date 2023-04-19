@@ -28,6 +28,7 @@ brew harfbuzz
 brew helm
 brew icu4c
 brew jansson
+brew javacc
 brew jemalloc
 brew jpeg-turbo
 brew jq
@@ -49,6 +50,7 @@ brew libpthread-stubs
 brew librdkafka
 brew libserdes
 brew libsm
+brew libsodium
 brew libtiff
 brew libuv
 brew libx11
@@ -128,8 +130,8 @@ tap rcmdnk/file
 brew brew-file
 
 # App Store applications
-appstore 1444383602  GoodNotes  (5.9.94)
+appstore 1444383602  GoodNotes  (5.9.100)
 appstore 409183694   Keynote    (13.0)
 appstore 441258766   Magnet     (2.11.0)
-appstore 1480068668  Messenger  (183.0)
+appstore 1480068668  Messenger  (184.0)
 appstore 803453959   Slack      (4.31.155)
