@@ -2,6 +2,7 @@
 # tap repositories and their packages
 
 tap homebrew/core
+brew abseil
 brew angular-cli
 brew avro-c
 brew bash-completion
@@ -129,9 +130,12 @@ brew kubelogin
 tap rcmdnk/file
 brew brew-file
 
+# Other Homebrew packages
+brew protobuf@21
+
 # App Store applications
-appstore 1444383602  GoodNotes  (5.9.110)
+appstore 1444383602  GoodNotes  (5.9.112)
 appstore 409183694   Keynote    (13.0)
 appstore 441258766   Magnet     (2.11.0)
-appstore 1480068668  Messenger  (186.0)
+appstore 1480068668  Messenger  (187.0)
 appstore 803453959   Slack      (4.32.122)
