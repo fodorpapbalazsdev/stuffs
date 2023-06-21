@@ -124,6 +124,8 @@ source $ZSH/oh-my-zsh.sh
 # General
 alias zshconfig="open ~/.zshrc"
 alias cdm2="cd ~/.m2"
+alias topmem="top -omem -s 2 -n 5"
+alias topcpu="top -ocpu -s 2 -n 5"
 
 # Git related
 alias gitupdate='git fetch;git pull'
