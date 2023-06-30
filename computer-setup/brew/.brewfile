@@ -85,6 +85,7 @@ brew openjdk
 brew openjdk@11
 brew openjdk@8
 brew openssl@1.1
+brew openssl@3
 brew pcre
 brew pcre2
 brew perl
@@ -134,8 +135,8 @@ brew brew-file
 brew protobuf@21
 
 # App Store applications
-appstore 1444383602  GoodNotes  (5.9.112)
-appstore 409183694   Keynote    (13.0)
+appstore 1444383602  GoodNotes  (5.9.118)
+appstore 409183694   Keynote    (13.1)
 appstore 441258766   Magnet     (2.11.0)
-appstore 1480068668  Messenger  (187.0)
-appstore 803453959   Slack      (4.32.122)
+appstore 1480068668  Messenger  (189.0)
+appstore 803453959   Slack      (4.32.127)
