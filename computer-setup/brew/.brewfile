@@ -103,6 +103,7 @@ brew snappy
 brew spring-completion
 brew sqlite
 brew subversion
+brew tree
 brew utf8proc
 brew vim
 brew watch
@@ -117,11 +118,13 @@ brew zsh-syntax-highlighting
 brew zstd
 
 tap homebrew/cask
+cask aldente
 cask beyond-compare
 cask dbeaver-community
 cask iterm2
 cask marta
 cask postman
+cask spotify
 cask vagrant
 
 tap homebrew/bundle
@@ -142,8 +145,8 @@ appstore 1444383602 GoodNotes (5.9.121)
 appstore 409183694 Keynote (13.1)
 appstore 441258766 Magnet (2.11.0)
 appstore 1480068668 Messenger (189.0)
-appstore 985367838 Microsoft Outlook (16.74.1)
 appstore 462058435 Microsoft Excel (16.74)
-appstore 462062816 Microsoft PowerPoint (16.74)
+appstore 985367838 Microsoft Outlook (16.74.1)
 appstore 462054704 Microsoft Word (16.74)
+appstore 462062816 Microsoft PowerPoint (16.74)
 appstore 803453959 Slack (4.33.73)

@@ -150,6 +150,7 @@ alias kn='kubens'
 alias kc='echo ${BLUE}$(kubectx -c) : ${YELLOW}$(kubens -c)${PLAIN}'
 alias kfns='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kubernetes/kfns.sh'
 alias kgi="kc && kubectl get deployments -o=json | jq -r '.items[].spec.template.spec.containers[].image'"
+alias klogs='kubectl logs'
 
 # project related
 alias cdstuffs='cd $HOME/Documents/personal/repositories/stuffs'
@@ -158,6 +159,8 @@ alias cdcare='cd $HOME/Documents/repositories/epd/care'
 alias cdjur='cd $HOME/Documents/repositories/epd/juridical'
 alias cdjuridical='cdjur'
 alias cdmain='cd $HOME/Documents/repositories/epd/main'
+alias cdbil='cd $HOME/Documents/repositories/epd/billing'
+alias cdbilling='cdbil'
 
 # intelliJ IDEA related
 alias istuffs='cdstuffs && idea .'
@@ -202,3 +205,8 @@ fi
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh) # set up autocomplete
 
 export KUBECONFIG=/Users/balazsfodorpap/Documents/configs/kube-avinty-config.conf
+
+
+# to limit fzf to the current directory
+# https://github.com/junegunn/fzf/issues/980
+export FZF_DEFAULT_COMMAND="find . -maxdepth 5 | sed 's/^..//'"
