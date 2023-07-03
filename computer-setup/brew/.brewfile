@@ -4,6 +4,8 @@
 tap homebrew/core
 brew abseil
 brew angular-cli
+brew apr
+brew apr-util
 brew avro-c
 brew bash-completion
 brew bat
@@ -77,13 +79,10 @@ brew mpdecimal
 brew mysql
 brew ncurses
 brew nghttp2
-brew node
-brew node@12
 brew node@14
+brew nvm
 brew oniguruma
 brew openjdk
-brew openjdk@11
-brew openjdk@8
 brew openssl@1.1
 brew openssl@3
 brew pcre
@@ -93,6 +92,7 @@ brew pixman
 brew pkg-config
 brew postgresql@14
 brew protobuf
+brew protobuf@21
 brew python@3.10
 brew python@3.11
 brew python@3.9
@@ -102,26 +102,31 @@ brew serve
 brew snappy
 brew spring-completion
 brew sqlite
+brew subversion
+brew utf8proc
 brew vim
 brew watch
 brew xorgproto
 brew xz
 brew yajl
+brew yq
 brew zlib
 brew zookeeper
 brew zsh
 brew zsh-syntax-highlighting
 brew zstd
 
+tap homebrew/cask
+cask beyond-compare
+cask dbeaver-community
+cask iterm2
+cask marta
+cask postman
+cask vagrant
+
 tap homebrew/bundle
 
 tap homebrew/cask-versions
-
-tap homebrew/cask
-cask beyond-compare
-cask marta
-cask vagrant
-cask virtualbox
 
 tap derailed/k9s
 
@@ -131,12 +136,14 @@ brew kubelogin
 tap rcmdnk/file
 brew brew-file
 
-# Other Homebrew packages
-brew protobuf@21
-
 # App Store applications
-appstore 1444383602  GoodNotes  (5.9.118)
-appstore 409183694   Keynote    (13.1)
-appstore 441258766   Magnet     (2.11.0)
-appstore 1480068668  Messenger  (189.0)
-appstore 803453959   Slack      (4.32.127)
+appstore 937984704 Amphetamine (5.2.2)
+appstore 1444383602 GoodNotes (5.9.121)
+appstore 409183694 Keynote (13.1)
+appstore 441258766 Magnet (2.11.0)
+appstore 1480068668 Messenger (189.0)
+appstore 985367838 Microsoft Outlook (16.74.1)
+appstore 462058435 Microsoft Excel (16.74)
+appstore 462062816 Microsoft PowerPoint (16.74)
+appstore 462054704 Microsoft Word (16.74)
+appstore 803453959 Slack (4.33.73)

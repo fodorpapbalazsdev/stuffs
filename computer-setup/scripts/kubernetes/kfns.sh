@@ -73,7 +73,7 @@ else
    namespace_search $1 $2
 fi
 
-# if we have second argument, then we want to connect to that cluster:namespace, so we do not want to reset
+# if we have second argument, then we want to connect to that cluster:namespace, so we don't want to reset
 if [ -z "$2" ]
  then
     reset

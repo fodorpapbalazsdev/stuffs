@@ -89,7 +89,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # some notes about kube-ps1:
 #   currently it's not working with oh-my-zsh, https://github.com/jonmosco/kube-ps1/issues/168
-plugins=(git kube-ps1)
+plugins=(git kube-ps1 zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,10 +122,11 @@ source $ZSH/oh-my-zsh.sh
 ###### Own aliases starts here
 
 # General
-alias zshconfig="open ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 alias cdm2="cd ~/.m2"
 alias topmem="top -omem -s 2 -n 5"
 alias topcpu="top -ocpu -s 2 -n 5"
+alias cl="clear"
 
 # Git related
 alias gitupdate='git fetch;git pull'
@@ -170,16 +171,16 @@ alias imain='cdmain && idea .'
 alias fzfcd='cd $(find . -type d -print | fzf)'
 
 ###### Own aliases ends here
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export HISTFILESIZE=100000
+export HISTSIZE=100000
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -199,3 +200,5 @@ fi
 
 # Kubernetes
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh) # set up autocomplete
+
+export KUBECONFIG=/Users/balazsfodorpap/Documents/configs/kube-avinty-config.conf
