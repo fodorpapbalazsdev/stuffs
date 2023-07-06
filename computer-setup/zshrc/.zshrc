@@ -193,16 +193,15 @@ export KUBECONFIG=/Users/balazsfodorpap/Documents/configs/kube-avinty-config.con
 # export FZF_DEFAULT_COMMAND="find . -maxdepth 5 | sed 's/^..//'"
 
 # first "tab" press bring the fzf selection list and then the second tab just select the currently selected option(s) instead of enter (enter is still working)
-zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
+# zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
+export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
+export FZF_DEFAULT_OPTS="--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b"
 
-# export FZF_DEFAULT_OPTS="--height=60% --info=inline --border --margin=1 --padding=1 --preview 'bat --color=always {}'"
 
-export FZF_DEFAULT_OPTS="--height=60% --info=inline --border --margin=1 --padding=1 --preview 'bat --color=always {}' --prompt 'All> ' \
-             --header 'CTRL-D: Directories / CTRL-F: Files' \
-             --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)' \
-             --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)' \
-             --bind 'CTRL-O:become(code {1})'
-             --bind 'tab:become(echo {1})'" ## TODO, fixme!
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}' --bind='enter:become(code {1})'"
+
+export FZF_CTRL_R_OPTS='--bind=enter:become({1})'
 
 
 ####################################################################################################
