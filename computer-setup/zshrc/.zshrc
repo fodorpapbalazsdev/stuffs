@@ -127,7 +127,6 @@ alias ibil='ibilling'
 alias imain='cdmain && idea .'
 
 # fzf related
-alias fzfcdfinf='find * -type d | fzf'
 alias fzfcd='cd $(find * -type d | fzf)'
 alias rgfzf='rg . | fzf'
 
