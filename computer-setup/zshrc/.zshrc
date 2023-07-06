@@ -1,4 +1,5 @@
-# Colors
+####################################################################################################
+#                     Colors and text formatting
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
@@ -6,31 +7,215 @@ BLUE='\033[0;36m'
 PLAIN='\033[0m'
 bold=$(tput bold)
 normal=$(tput sgr0)
+####################################################################################################
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+
+
+
+
+####################################################################################################
+######                ZNAP
+####################################################################################################
+# ZNAP is a package manager for zsh: https://github.com/marlonrichert/zsh-snap
+# Download Znap, if it's not there yet.
+[[ -r /Users/balazsfodorpap/.oh-my-zsh/custom/plugins/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git /Users/balazsfodorpap/.oh-my-zsh/custom/plugins/znap
+source /Users/balazsfodorpap/.oh-my-zsh/custom/plugins/znap/znap.zsh  # Start Znap
+
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+#                     PLUGINS
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Would you like to use another custom folder than $ZSH/custom?
+#ZSH_CUSTOM=~/zsh/
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+
+plugins=(
+         git
+         kubectl
+         zsh-syntax-highlighting
+         zsh-autosuggestions
+         zsh-autocomplete
+         fzf-zsh-plugin
+         fzf-tab
+)
+
+source $ZSH/oh-my-zsh.sh
+
+source /Users/balazsfodorpap/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+######                Own aliases starts here
+####################################################################################################
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+# General
+alias zshconfig="code ~/.zshrc"
+alias cdm2="cd ~/.m2"
+alias topmem="top -omem -s 2 -n 5"
+alias topcpu="top -ocpu -s 2 -n 5"
+alias cl="clear"
+
+# Git related
+alias gitupdate='git fetch;git pull'
+alias gitdevelop='git checkout develop;gitupdate'
+alias gitmain='git checkout main;gitupdate'
+alias gitmaster='git checkout master;gitupdate'
+
+# Kafka related
+# make sure that the path is correct and scripts are there
+alias kstart='sh $HOME/Documents/kafka/kafka-docker/start.sh'
+alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh'
+
+# Docker & Kubernetes related
+alias dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
+alias kx='kubectx'
+alias kntnieuw='kubectx aota070.avinty.cloud && kubens tnieuw '
+alias knonieuw='kubectx aota070.avinty.cloud && kubens onieuw '
+alias knthuidig='kubectx aota070.avinty.cloud && kubens thuidig '
+alias kntvorig='kubectx aota070.avinty.cloud && kubens tvorig '
+alias kn='kubens'
+alias kc='echo ${BLUE}$(kubectx -c) : ${YELLOW}$(kubens -c)${PLAIN}'
+alias kfns='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kubernetes/kfns.sh'
+alias kgi="kc && kubectl get deployments -o=json | jq -r '.items[].spec.template.spec.containers[].image'"
+alias klogs='kubectl logs'
+
+# project related
+alias cdstuffs='cd $HOME/Documents/personal/repositories/stuffs'
+alias cdclient='cd $HOME/Documents/repositories/epd/client'
+alias cdcare='cd $HOME/Documents/repositories/epd/care'
+alias cdjur='cd $HOME/Documents/repositories/epd/juridical'
+alias cdjuridical='cdjur'
+alias cdmain='cd $HOME/Documents/repositories/epd/main'
+alias cdbil='cd $HOME/Documents/repositories/epd/billing'
+alias cdbilling='cdbil'
+
+# intelliJ IDEA related
+alias istuffs='cdstuffs && idea .'
+alias iclient='cdclient && idea .'
+alias icare='cdcare && idea .'
+alias ijuridical='cdjuridical && idea .'
+alias ijur='ijuridical'
+alias ibilling='cdbilling && idea .'
+alias ibil='ibilling'
+alias imain='cdmain && idea .'
+
+# fzf related
+alias fzfcdfinf='find * -type d | fzf'
+alias fzfcd='cd $(find * -type d | fzf)'
+alias rgfzf='rg . | fzf'
+
+####################################################################################################
+
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+
+export HISTFILESIZE=100000 # maximum number of lines that we can write back to the history file on disk.
+export HISTSIZE=100000 # maximum number of lines of history that we can store in memory
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /Users/balazsfodorpap/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Default text editor
+export EDITOR="/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
+
+####################################################################################################
+
+
+
+
+####################################################################################################
+#                   HOMEBREW - BREWFILE
+
+# Location of Brewfile
+export HOMEBREW_BREWFILE=$HOME/Documents/personal/repositories/stuffs/computer-setup/brew/.brewfile
+
+# Wrap brew command to for an automatic update of Brewfile when you execute such a brew install or brew uninstall.
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
 fi
+
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+#                     KUBERNETES
+
+# set up autocomplete
+#[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# location of the kubeconfig (avinty)
+export KUBECONFIG=/Users/balazsfodorpap/Documents/configs/kube-avinty-config.conf
+
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+#                     FZF
+
+# !!! Make sure you add fzf-zsh-plugin
+# Cheatsheets: https://andrew-quinn.me/fzf/
+
+# to limit fzf to the current directory
+# https://github.com/junegunn/fzf/issues/980
+# export FZF_DEFAULT_COMMAND="find . -maxdepth 5 | sed 's/^..//'"
+
+# first "tab" press bring the fzf selection list and then the second tab just select the currently selected option(s) instead of enter (enter is still working)
+zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
+
+# export FZF_DEFAULT_OPTS="--height=60% --info=inline --border --margin=1 --padding=1 --preview 'bat --color=always {}'"
+
+export FZF_DEFAULT_OPTS="--height=60% --info=inline --border --margin=1 --padding=1 --preview 'bat --color=always {}' --prompt 'All> ' \
+             --header 'CTRL-D: Directories / CTRL-F: Files' \
+             --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)' \
+             --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)' \
+             --bind 'CTRL-O:become(code {1})'
+             --bind 'tab:become(echo {1})'" ## TODO, fixme!
+
+
+####################################################################################################
+
+
+
+
+####################################################################################################
+#                     UNUSED
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/balazsfodorpap/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -78,21 +263,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-
-# some notes about kube-ps1:
-#   currently it's not working with oh-my-zsh, https://github.com/jonmosco/kube-ps1/issues/168
-plugins=(git kube-ps1 zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete)
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -110,103 +280,4 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-###### Own aliases starts here
-
-# General
-alias zshconfig="code ~/.zshrc"
-alias cdm2="cd ~/.m2"
-alias topmem="top -omem -s 2 -n 5"
-alias topcpu="top -ocpu -s 2 -n 5"
-alias cl="clear"
-
-# Git related
-alias gitupdate='git fetch;git pull'
-alias gitdevelop='git checkout develop;gitupdate'
-alias gitmain='git checkout main;gitupdate'
-alias gitmaster='git checkout master;gitupdate'
-
-# Kafka related
-# make sure that the path is correct and scripts are there
-alias kstart='sh $HOME/Documents/kafka/kafka-docker/start.sh' # change the path to your kafka dir
-alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh' # change the path to your kafka dir
-
-# Docker & Kubernetes related
-alias dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
-alias kx='kubectx'
-alias kntnieuw='kubectx aota070.avinty.cloud && kubens tnieuw '
-alias knonieuw='kubectx aota070.avinty.cloud && kubens onieuw '
-alias knthuidig='kubectx aota070.avinty.cloud && kubens thuidig '
-alias kntvorig='kubectx aota070.avinty.cloud && kubens tvorig '
-alias kn='kubens'
-alias kc='echo ${BLUE}$(kubectx -c) : ${YELLOW}$(kubens -c)${PLAIN}'
-alias kfns='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kubernetes/kfns.sh'
-alias kgi="kc && kubectl get deployments -o=json | jq -r '.items[].spec.template.spec.containers[].image'"
-alias klogs='kubectl logs'
-
-# project related
-alias cdstuffs='cd $HOME/Documents/personal/repositories/stuffs'
-alias cdclient='cd $HOME/Documents/repositories/epd/client'
-alias cdcare='cd $HOME/Documents/repositories/epd/care'
-alias cdjur='cd $HOME/Documents/repositories/epd/juridical'
-alias cdjuridical='cdjur'
-alias cdmain='cd $HOME/Documents/repositories/epd/main'
-alias cdbil='cd $HOME/Documents/repositories/epd/billing'
-alias cdbilling='cdbil'
-
-# intelliJ IDEA related
-alias istuffs='cdstuffs && idea .'
-alias iclient='cdclient && idea .'
-alias icare='cdcare && idea .'
-alias ijuridical='cdjuridical && idea .'
-alias ijur='ijuridical'
-alias imain='cdmain && idea .'
-
-#fzf related
-alias fzfcd='cd $(find . -type d -print | fzf)'
-
-###### Own aliases ends here
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-
-export HISTFILESIZE=100000
-export HISTSIZE=100000
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Default text editor
-export EDITOR="/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
-
-# Location of Brewfile
-export HOMEBREW_BREWFILE=$HOME/Documents/personal/repositories/stuffs/computer-setup/brew/.brewfile
-
-# Wrap brew command to for an automatic update of Brewfile when you execute such a brew install or brew uninstall.
-if [ -f $(brew --prefix)/etc/brew-wrap ];then
-  source $(brew --prefix)/etc/brew-wrap
-fi
-
-# Kubernetes
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh) # set up autocomplete
-
-export KUBECONFIG=/Users/balazsfodorpap/Documents/configs/kube-avinty-config.conf
-
-
-# to limit fzf to the current directory
-# https://github.com/junegunn/fzf/issues/980
-export FZF_DEFAULT_COMMAND="find . -maxdepth 5 | sed 's/^..//'"
+####################################################################################################
