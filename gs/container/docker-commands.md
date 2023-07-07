@@ -1,16 +1,13 @@
-#### This file contains some usefull command what I used during my container development
+### This file contains some useful command what I used during my container development
 
 ---
-### List Container IP Address
+#### List Container IP Address
+Alias cmd: `dockerip`
+
+behind the alias `docker ps | tail -n +2 | while read cid b; do echo -n "($cid): "; docker inspect $cid | grep "IPAddress" | grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}';  done`
+
+#### Others
 
 `
 docker network ls
 `
-
-```
-docker network inspect -f \
-'{{json .Containers}}' f984d187c1e8 | \
-jq '.[] | .Name + ":" + .IPv4Address'
-```
-
----
