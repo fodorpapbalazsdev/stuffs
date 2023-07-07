@@ -80,6 +80,7 @@ brew mpdecimal
 brew mysql
 brew ncurses
 brew nghttp2
+brew node
 brew node@14
 brew nvm
 brew oniguruma
@@ -127,6 +128,7 @@ cask iterm2
 cask marta
 cask postman
 cask spotify
+cask sublime-text
 cask vagrant
 
 tap homebrew/bundle

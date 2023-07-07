@@ -76,7 +76,9 @@ source /Users/balazsfodorpap/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-auto
 # For a full list of active aliases, run `alias`.
 
 # General
-alias zshconfig="code ~/.zshrc"
+alias zshconfig="subl ~/.zshrc"
+alias batconfig='subl ~/.config/bat/config'
+
 alias cdm2="cd ~/.m2"
 alias topmem="top -omem -s 2 -n 5"
 alias topcpu="top -ocpu -s 2 -n 5"
@@ -127,8 +129,9 @@ alias ibil='ibilling'
 alias imain='cdmain && idea .'
 
 # fzf related
-alias fzfcd='cd $(find * -type d | fzf)'
 alias rgfzf='rg . | fzf'
+
+alias svncommit='open -a Google\ Chrome http://svn.impulseinfo.lan/\!/\#UserProd/commit/r168882'
 
 ####################################################################################################
 
@@ -194,15 +197,30 @@ export KUBECONFIG=/Users/balazsfodorpap/Documents/configs/kube-avinty-config.con
 
 # first "tab" press bring the fzf selection list and then the second tab just select the currently selected option(s) instead of enter (enter is still working)
 # zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
-export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 export FZF_DEFAULT_OPTS="--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b"
+
+# FZF Coloring
+# Page for config colors easily: https://minsw.github.io/fzf-color-picker/
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#a6a6a6,bg:#121212,hl:#5f87af --color=fg+:#cef0ee,bg+:#262626,hl+:#2df0ac --color=info:#dbdba2,prompt:#d7005f,pointer:#eddbff --color=marker:#a7d477,spinner:#af5fff,header:#87afaf'
 
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}' --bind='enter:become(code {1})'"
+export FZF_CTRL_T_OPTS="--preview 'bat {}' --bind='enter:become(subl {1})'"
 
-export FZF_CTRL_R_OPTS='--bind=enter:become({1})'
 
+# export FZF_CTRL_R_OPTS='--bind=enter:become({1})'
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard, CTRL-/ to toggle-preview'"
+
+# For directory search
+bindkey "ç" fzf-cd-widget
+export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 ####################################################################################################
 
