@@ -23,14 +23,12 @@ if ! docker info >/dev/null 2>&1; then
     exit 1
 else
 
-   if ! { test -f "$path"/zookeeper.yaml && test -f "$path"/kafka.yaml; } then
-        echo "ERROR: Kafka yaml config files (zookeeper.yaml or kafka.yaml) don't found under '$path'"
+   if ! { test -f "$path"/kafka.yaml; } then
+        echo "ERROR: Kafka yaml config files (kafka.yaml) don't found under '$path'"
         echo "INFO: Please provide the correct path with -p like 'start.sh $HOME/Documents/kafka/kafka-docker'"
         exit 1
    else
         kubectl config use-context docker-desktop
-        kubectl create namespace zookeeper
-        kubectl -n zookeeper apply -f "$path"/zookeeper.yaml
         kubectl create namespace kafka
         kubectl -n kafka apply -f "$path"/kafka.yaml
         echo "--> Successful"

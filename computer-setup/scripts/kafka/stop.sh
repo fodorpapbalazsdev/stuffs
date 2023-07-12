@@ -23,8 +23,8 @@ if ! docker info >/dev/null 2>&1; then
     echo "--> Successful"
 else
 
-   if ! { test -f "$path"/zookeeper.yaml && test -f "$path"/kafka.yaml; } then
-        echo "ERROR: Kafka yaml config files (zookeeper.yaml or kafka.yaml) don't found under '$path'"
+   if ! { test -f "$path"/kafka.yaml; } then
+        echo "ERROR: Kafka yaml config files (kafka.yaml) don't found under '$path'"
         echo "INFO: Please provide the correct path with -p like 'stop.sh $HOME/Documents/kafka/kafka-docker'"
         exit 1
    else
@@ -32,7 +32,6 @@ else
         kubectl -n kafka delete -f "$path"/kafka.yaml
         kubectl -n zookeeper delete -f "$path"/zookeeper.yaml
         kubectl delete namespace kafka
-        kubectl delete namespace zookeeper
         echo "--> Successful"
    fi
 fi

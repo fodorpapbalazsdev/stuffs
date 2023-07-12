@@ -92,11 +92,11 @@ alias gitmaster='git checkout master;gitupdate'
 
 # Kafka related
 # make sure that the path is correct and scripts are there
-alias kstart='sh $HOME/Documents/kafka/kafka-docker/start.sh'
-alias kstop='sh $HOME/Documents/kafka/kafka-docker/stop.sh'
+alias kstart='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kafka/start.sh'
+alias kstop='sh $HOME/Documents/personal/repositories/stuffs/computer-setup/scripts/kafka/stop.sh'
 
 # Docker & Kubernetes related
-alias dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
+alias dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "($cid): "; docker inspect $cid | grep "IPAddress" | grep -E -o "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}";  done'
 alias kx='kubectx'
 alias kntnieuw='kubectx aota070.avinty.cloud && kubens tnieuw '
 alias knonieuw='kubectx aota070.avinty.cloud && kubens onieuw '
@@ -176,8 +176,8 @@ fi
 # set up autocomplete
 #[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-# location of the kubeconfig (avinty)
-export KUBECONFIG=/Users/balazsfodorpap/Documents/configs/kube-avinty-config.conf
+# location of the kubeconfig (avinty and docker-desktop)
+export KUBECONFIG=/Users/balazsfodorpap/.kube/config
 
 ####################################################################################################
 
