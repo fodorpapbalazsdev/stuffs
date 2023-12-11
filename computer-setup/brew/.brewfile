@@ -14,7 +14,9 @@ brew brotli
 brew c-ares
 brew ca-certificates
 brew cairo
+brew capstone
 brew docker-completion
+brew dtc
 brew fd
 brew fontconfig
 brew freetype
@@ -24,8 +26,11 @@ brew gettext
 brew giflib
 brew git
 brew git-flow-avh
+brew git-gui
 brew glib
+brew gmp
 brew gnu-getopt
+brew gnutls
 brew graphite2
 brew grep
 brew harfbuzz
@@ -36,6 +41,7 @@ brew javacc
 brew jemalloc
 brew jpeg-turbo
 brew jq
+brew jsoncpp
 brew k9s
 brew kafka
 brew kcat
@@ -47,15 +53,23 @@ brew libcbor
 brew libev
 brew libevent
 brew libfido2
+brew libgit2
 brew libice
+brew libidn2
 brew libnghttp2
 brew libpng
 brew libpthread-stubs
 brew librdkafka
 brew libserdes
+brew libslirp
 brew libsm
 brew libsodium
+brew libssh
+brew libssh2
+brew libtasn1
 brew libtiff
+brew libunistring
+brew libusb
 brew libuv
 brew libx11
 brew libxau
@@ -66,6 +80,7 @@ brew libxmu
 brew libxrender
 brew libxt
 brew libyaml
+brew lima
 brew liquibase
 brew little-cms2
 brew lua
@@ -79,6 +94,7 @@ brew minikube
 brew mpdecimal
 brew mysql
 brew ncurses
+brew nettle
 brew nghttp2
 brew node
 brew node@14
@@ -87,17 +103,21 @@ brew oniguruma
 brew openjdk
 brew openssl@1.1
 brew openssl@3
+brew p11-kit
 brew pcre
 brew pcre2
 brew perl
 brew pixman
 brew pkg-config
 brew postgresql@14
+brew powerlevel10k
 brew protobuf
 brew protobuf@21
 brew python@3.10
 brew python@3.11
+brew python@3.12
 brew python@3.9
+brew qemu
 brew readline
 brew ripgrep
 brew ruby
@@ -106,8 +126,11 @@ brew snappy
 brew spring-completion
 brew sqlite
 brew subversion
+brew tcl-tk
 brew tree
+brew unbound
 brew utf8proc
+brew vde
 brew vim
 brew watch
 brew xorgproto
@@ -126,6 +149,7 @@ cask beyond-compare
 cask dbeaver-community
 cask iterm2
 cask marta
+cask notunes
 cask postman
 cask spotify
 cask sublime-text
@@ -144,17 +168,17 @@ tap rcmdnk/file
 brew brew-file
 
 tap romkatv/powerlevel10k
-brew powerlevel10k
 
 # App Store applications
-appstore 937984704 Amphetamine (5.2.2)
-appstore 1444383602 GoodNotes (5.9.122)
-appstore 409183694 Keynote (13.1)
-appstore 441258766 Magnet (2.11.0)
-appstore 1480068668 Messenger (190.0)
-appstore 462058435 Microsoft Excel (16.75)
-appstore 462054704 Microsoft Word (16.75)
-appstore 462062816 Microsoft PowerPoint (16.74)
-appstore 985367838 Microsoft Outlook (16.74.2)
+appstore 937984704 Amphetamine (5.3.2)
+appstore 1032155965 Foxit PDF Reader (11.1.2)
+appstore 1444383602 Goodnotes (6.2.16)
+appstore 409183694 Keynote (13.2)
+appstore 441258766 Magnet (2.13.0)
+appstore 1480068668 Messenger (200.0)
+appstore 985367838 Microsoft Outlook (16.79.2)
+appstore 462062816 Microsoft PowerPoint (16.79.1)
+appstore 462058435 Microsoft Excel (16.79.1)
+appstore 462054704 Microsoft Word (16.79.1)
 appstore 823766827 OneDrive (23.127.0618)
-appstore 803453959 Slack (4.33.73)
+appstore 803453959 Slack (4.35.131)
