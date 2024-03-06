@@ -10,6 +10,7 @@ brew avro-c
 brew bash-completion
 brew bat
 brew berkeley-db
+brew berkeley-db@5
 brew brotli
 brew c-ares
 brew ca-certificates
@@ -172,13 +173,13 @@ tap romkatv/powerlevel10k
 # App Store applications
 appstore 937984704 Amphetamine (5.3.2)
 appstore 1032155965 Foxit PDF Reader (11.1.2)
-appstore 1444383602 Goodnotes (6.2.16)
+appstore 1444383602 Goodnotes (6.3.6)
 appstore 409183694 Keynote (13.2)
-appstore 441258766 Magnet (2.13.0)
-appstore 1480068668 Messenger (200.0)
-appstore 985367838 Microsoft Outlook (16.79.2)
-appstore 462062816 Microsoft PowerPoint (16.79.1)
-appstore 462058435 Microsoft Excel (16.79.1)
-appstore 462054704 Microsoft Word (16.79.1)
+appstore 441258766 Magnet (2.14.0)
+appstore 1480068668 Messenger (205.0)
+appstore 985367838 Microsoft Outlook (16.82.1)
+appstore 462058435 Microsoft Excel (16.82)
+appstore 462062816 Microsoft PowerPoint (16.82)
+appstore 462054704 Microsoft Word (16.82)
 appstore 823766827 OneDrive (23.127.0618)
-appstore 803453959 Slack (4.35.131)
+appstore 803453959 Slack (4.36.140)
