@@ -9,15 +9,13 @@ brew apr-util
 brew avro-c
 brew bash-completion
 brew bat
-brew berkeley-db
 brew berkeley-db@5
 brew brotli
 brew c-ares
 brew ca-certificates
 brew cairo
-brew capstone
 brew docker-completion
-brew dtc
+brew docker-compose
 brew fd
 brew fontconfig
 brew freetype
@@ -29,48 +27,42 @@ brew git
 brew git-flow-avh
 brew git-gui
 brew glib
-brew gmp
 brew gnu-getopt
-brew gnutls
+brew go
 brew graphite2
 brew grep
 brew harfbuzz
 brew helm
 brew icu4c
+brew icu4c@75
 brew jansson
 brew javacc
 brew jemalloc
 brew jpeg-turbo
 brew jq
-brew jsoncpp
 brew k9s
 brew kafka
 brew kcat
+brew kind
 brew krb5
 brew kube-ps1
 brew kubectx
+brew kubelogin
 brew kubernetes-cli
 brew libcbor
 brew libev
 brew libevent
 brew libfido2
-brew libgit2
 brew libice
-brew libidn2
 brew libnghttp2
 brew libpng
 brew libpthread-stubs
 brew librdkafka
 brew libserdes
-brew libslirp
 brew libsm
 brew libsodium
-brew libssh
 brew libssh2
-brew libtasn1
 brew libtiff
-brew libunistring
-brew libusb
 brew libuv
 brew libx11
 brew libxau
@@ -81,7 +73,6 @@ brew libxmu
 brew libxrender
 brew libxt
 brew libyaml
-brew lima
 brew liquibase
 brew little-cms2
 brew lua
@@ -95,7 +86,6 @@ brew minikube
 brew mpdecimal
 brew mysql
 brew ncurses
-brew nettle
 brew nghttp2
 brew node
 brew node@14
@@ -104,7 +94,6 @@ brew oniguruma
 brew openjdk
 brew openssl@1.1
 brew openssl@3
-brew p11-kit
 brew pcre
 brew pcre2
 brew perl
@@ -114,11 +103,12 @@ brew postgresql@14
 brew powerlevel10k
 brew protobuf
 brew protobuf@21
+brew python-packaging
 brew python@3.10
 brew python@3.11
 brew python@3.12
+brew python@3.13
 brew python@3.9
-brew qemu
 brew readline
 brew ripgrep
 brew ruby
@@ -129,9 +119,7 @@ brew sqlite
 brew subversion
 brew tcl-tk
 brew tree
-brew unbound
 brew utf8proc
-brew vde
 brew vim
 brew watch
 brew xorgproto
@@ -149,7 +137,9 @@ cask aldente
 cask beyond-compare
 cask dbeaver-community
 cask iterm2
+cask luyten
 cask marta
+cask meld
 cask notunes
 cask postman
 cask spotify
@@ -163,7 +153,6 @@ tap homebrew/cask-versions
 tap derailed/k9s
 
 tap int128/kubelogin
-brew kubelogin
 
 tap rcmdnk/file
 brew brew-file
@@ -173,13 +162,10 @@ tap romkatv/powerlevel10k
 # App Store applications
 appstore 937984704 Amphetamine (5.3.2)
 appstore 1032155965 Foxit PDF Reader (11.1.2)
-appstore 1444383602 Goodnotes (6.3.6)
-appstore 409183694 Keynote (13.2)
+appstore 1444383602 Goodnotes (6.5.3)
+appstore 409183694 Keynote (14.2)
 appstore 441258766 Magnet (2.14.0)
-appstore 1480068668 Messenger (205.0)
-appstore 985367838 Microsoft Outlook (16.82.1)
-appstore 462058435 Microsoft Excel (16.82)
-appstore 462062816 Microsoft PowerPoint (16.82)
-appstore 462054704 Microsoft Word (16.82)
+appstore 1480068668 Messenger (220.1)
 appstore 823766827 OneDrive (23.127.0618)
-appstore 803453959 Slack (4.36.140)
+appstore 600925318 Parallels Client (19.3.24686)
+appstore 1230249825 VMware Remote Console (12.0.5)
