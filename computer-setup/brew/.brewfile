@@ -126,6 +126,7 @@ brew vim
 brew watch
 brew xorgproto
 brew xz
+brew yadm
 brew yajl
 brew yq
 brew zlib
