@@ -34,7 +34,6 @@ brew graphite2
 brew grep
 brew harfbuzz
 brew helm
-brew icu4c@76
 brew jansson
 brew javacc
 brew jemalloc
@@ -100,7 +99,6 @@ brew pcre
 brew pcre2
 brew perl
 brew pixman
-brew pkg-config
 brew postgresql@14
 brew powerlevel10k
 brew protobuf
@@ -119,7 +117,7 @@ brew snappy
 brew spring-completion
 brew sqlite
 brew subversion
-brew tcl-tk
+brew tcl-tk@8
 brew tree
 brew utf8proc
 brew vim
@@ -166,14 +164,15 @@ tap romkatv/powerlevel10k
 
 # Other Homebrew packages
 brew icu4c
+brew pkg-config
 
 # App Store applications
 appstore 937984704 Amphetamine (5.3.2)
 appstore 1032155965 Foxit PDF Reader (11.1.2)
 appstore 1444383602 Goodnotes (6.5.7)
 appstore 409183694 Keynote (14.2)
-appstore 441258766 Magnet (2.14.0)
-appstore 1480068668 Messenger (220.1)
+appstore 441258766 Magnet (3.0.5)
+appstore 1480068668 Messenger (223.0)
 appstore 823766827 OneDrive (23.127.0618)
 appstore 600925318 Parallels Client (19.3.24686)
 appstore 1230249825 VMware Remote Console (12.0.5)
