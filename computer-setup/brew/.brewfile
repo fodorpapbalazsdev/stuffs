@@ -30,6 +30,7 @@ brew git-gui
 brew glib
 brew gnu-getopt
 brew go
+brew gradle
 brew graphite2
 brew grep
 brew harfbuzz
@@ -48,6 +49,7 @@ brew kube-ps1
 brew kubectx
 brew kubelogin
 brew kubernetes-cli
+brew lazygit
 brew libcbor
 brew libev
 brew libevent
@@ -63,8 +65,10 @@ brew libsm
 brew libsodium
 brew libssh2
 brew libtiff
+brew libtommath
 brew libunistring
 brew libuv
+brew libvterm
 brew libx11
 brew libxau
 brew libxcb
@@ -76,7 +80,10 @@ brew libxt
 brew libyaml
 brew liquibase
 brew little-cms2
+brew lpeg
 brew lua
+brew luajit
+brew luv
 brew lz4
 brew lzlib
 brew lzo
@@ -85,8 +92,10 @@ brew mas
 brew maven
 brew minikube
 brew mpdecimal
+brew msgpack
 brew mysql
 brew ncurses
+brew neovim
 brew nghttp2
 brew node
 brew node@14
@@ -117,8 +126,12 @@ brew snappy
 brew spring-completion
 brew sqlite
 brew subversion
+brew tcl-tk
 brew tcl-tk@8
+brew tmux
 brew tree
+brew tree-sitter
+brew unibilium
 brew utf8proc
 brew vim
 brew watch
@@ -169,7 +182,7 @@ brew pkg-config
 # App Store applications
 appstore 937984704 Amphetamine (5.3.2)
 appstore 1032155965 Foxit PDF Reader (11.1.2)
-appstore 1444383602 Goodnotes (6.5.7)
+appstore 1444383602 Goodnotes (6.5.12)
 appstore 409183694 Keynote (14.2)
 appstore 441258766 Magnet (3.0.5)
 appstore 1480068668 Messenger (223.0)
