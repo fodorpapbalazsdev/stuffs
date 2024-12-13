@@ -39,6 +39,32 @@
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
+		<key>0x2c-0x180000-0x2b</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>0x01 0x3B</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
+		<key>0x2e-0x180000-0x2f</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>0x01 0x6F</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
 		<key>0x57-0xa0000-0xd</key>
 		<dict>
 			<key>Action</key>
@@ -52,6 +78,32 @@
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
+		<key>0x74-0x100000-0x11</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>0x01 0x63</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
+		<key>0x77-0x100000-0xd</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>0x01 0x26</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
 		<key>0x77-0x80000-0xd</key>
 		<dict>
 			<key>Action</key>
@@ -62,6 +114,19 @@
 			<integer>2</integer>
 			<key>Text</key>
 			<string>1</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
+		<key>0x78-0x100000-0x7</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>0x01 0x78</string>
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
@@ -156,6 +221,19 @@
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
+		<key>0xf702-0x380000-0x7b</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>0x01 0x10</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
 		<key>0xf703-0x2a0000-0x7c</key>
 		<dict>
 			<key>Action</key>
@@ -179,6 +257,19 @@
 			<integer>2</integer>
 			<key>Text</key>
 			<string>0x05</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
+		<key>0xf703-0x380000-0x7c</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>0x01 0x0E</string>
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
@@ -663,6 +754,8 @@
 			<false/>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string>tmux attach || tmux new -s main</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
