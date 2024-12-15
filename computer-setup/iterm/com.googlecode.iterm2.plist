@@ -208,6 +208,19 @@
 			<key>Version</key>
 			<integer>2</integer>
 		</dict>
+		<key>0x65-0x100000-0xe</key>
+		<dict>
+			<key>Action</key>
+			<integer>38</integer>
+			<key>Apply Mode</key>
+			<integer>0</integer>
+			<key>Escaping</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string>\&lt;M-e&gt;</string>
+			<key>Version</key>
+			<integer>2</integer>
+		</dict>
 		<key>0x74-0x100000-0x11</key>
 		<dict>
 			<key>Action</key>
@@ -1309,6 +1322,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Title Components</key>
+			<integer>2</integer>
 			<key>Transparency</key>
 			<real>0.051818484042553056</real>
 			<key>Unlimited Scrollback</key>
@@ -2056,6 +2071,8 @@
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
 	<key>SwitchTabModifier</key>
+	<integer>9</integer>
+	<key>SwitchWindowModifier</key>
 	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
